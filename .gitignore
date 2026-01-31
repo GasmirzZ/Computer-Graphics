@@ -1,0 +1,46 @@
+# --- Visual Studio privremeni fajlovi ---
+.vs/
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.sdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Build rezultati (Debug i Release) ---
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+
+# --- Specifični MFC/C++ fajlovi ---
+*.rar
+*.pdb
+*.obj
+*.iobj
+*.ltcg.obj
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.rsp
+*.pgc
+*.pgd
+*.meta
+*.tlog
+*.manifest
+*.res
+*.pch
+*.exp
+*.lib
+*.exe
+*.dll
+
+# --- Logovi i ostalo ---
+*.log
+*.tlog
+*.lastbuildstate
