@@ -127,7 +127,7 @@ void CGLRenderer::DestroyScene(CDC *pDC)
 	}
 }
 
-void CGLRenderer::DrawAxes(CDC* pDC)
+void CGLRenderer::DrawAxes()
 {
 	glLineWidth(2.0);
 	glDisable(GL_TEXTURE_2D);

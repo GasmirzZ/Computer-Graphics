@@ -1,6 +1,5 @@
 #pragma once
 #include "DImage.h"
-
 class CGLRenderer
 {
 public:
@@ -13,21 +12,28 @@ public:
 	void DrawScene(CDC* pDC);				// iscrtava scenu
 	void DestroyScene(CDC* pDC);			// dealocira resurse alocirane u drugim funkcijama ove klase,
 
+	void setCamera(double vert, double hor, double rad);
+
 	void DrawAxes();
+
 	UINT LoadTexture(char* fileName);
+
 	void DrawEnvCube(double a);
-	void DrawSphere(double r, int nSeg, double texU, double texV, double texR);
-	void DrawCone(double r, double h, int nSeg, double texU, double texV, double texR);
-	void DrawLegSegment(double r, double h, int nSeg);
-	void DrawLeg();
-	void DrawSpiderBody();
-	void DrawSpider();
-	double m_radius;
-	double m_angleHorizontal;
-	double m_angleVertical;
-	UINT m_texSpider;
-	UINT m_texEnv[6];
+
+	void DrawCylinder(double r1, double r2, double h, int nSeg, int texMode, bool bIsOpen);
+
+	void DrawLampBase();
+
+	void DrawLampArm();
+
+	void DrawLampHead();
+
+	void DrawLamp();
+
+	double angle1, angle2, angle3;
 protected:
 	HGLRC	 m_hrc; //OpenGL Rendering Context 
-
+	double angleVertical, angleHorizontal, radius;
+	UINT texCube[3];
+	UINT texLamp;
 };
