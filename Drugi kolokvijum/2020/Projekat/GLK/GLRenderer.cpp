@@ -79,7 +79,7 @@ void CGLRenderer::DrawScene(CDC *pDC)
 	//inicijalna tacka 0, 10, 0 je zadata u zadatku zato su hardkodirane 0 10 0 vrednosti
 
 	
-	DrawAxes(pDC);
+	DrawAxes();
 	DrawEnvCube(100);
 	//glTranslatef(0, -50, 0);
 	glBindTexture(GL_TEXTURE_2D, m_texSpider);
@@ -320,7 +320,7 @@ void CGLRenderer::DrawSphere(double r, int nSeg, double texU, double texV, doubl
 	double step1 = 2* 3.14 / nSeg; //latituda
 	double step2 = 3.14 / (2*nSeg); //longituda
 
-	for (double i = -3.14; i <= 3.14; i += step2)
+	for (double i = -3.14/2.; i <= 3.14/2.; i += step2)
 	{
 		glBegin(GL_QUAD_STRIP);
 
